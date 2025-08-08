@@ -1,57 +1,81 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0f2f5;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* better for longer pages */
+  align-items: flex-start;
   min-height: 100vh;
-  padding-top: 40px; /* space from top */
+  padding-top: 60px;
 }
 
 .container {
   background: white;
-  padding: 2rem 3rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  width: 360px; /* slightly wider */
+  padding: 3rem 4rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  width: 360px;
   text-align: center;
   box-sizing: border-box;
   min-height: 500px;
+  border: 1px solid #e1e4e8;
+  animation: fadeIn 0.7s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 
 h2 {
   margin-bottom: 1.5rem;
   color: #333;
   font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.3;
 }
 
 input {
   width: 100%;
-  padding: 0.7rem;
+  padding: 0.8rem;
   margin: 0.5rem 0 1rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
   box-sizing: border-box;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 6px #4a90e2;
+  border-color: #4a90e2;
+}
+
+
+input::placeholder {
+  font-size: 1.1rem;
+  color: #999;
 }
 
 button {
   width: 100%;
-  background-color: #4a90e2;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
   border: none;
   color: white;
-  padding: 0.8rem;
-  font-size: 1.1rem;
-  border-radius: 5px;
+  padding: 0.9rem;
+  font-size: 1.2rem;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.25s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
   margin-top: 0.5rem;
+  box-shadow: 0 4px 6px rgba(53, 122, 189, 0.6);
 }
 
 button:hover {
-  background-color: #357abd;
+  background: linear-gradient(135deg, #357abd, #274d75);
+  transform: scale(1.05);
 }
 
 p#msg {
@@ -125,7 +149,7 @@ a:hover {
 
 /* Footer */
 footer {
-  margin-top: 2rem;
+  margin-top: 3rem;
   padding-top: 1rem;
   border-top: 1px solid #ddd;
   font-size: 0.85rem;
