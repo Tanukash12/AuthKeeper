@@ -10,7 +10,7 @@ A simple resume-level fullstack project:
 
 1. MongoDB:
    - Option A: Run local MongoDB and use `mongodb://127.0.0.1:27017/fullstack_demo`
-   - Option B: Use Atlas and set `MONGO_URI` in backend/.env (see .env.example)
+   - Option B: Use Atlas and set `MONGO_URI` in backend/.env 
 
 2. Backend:
 ```bash
@@ -37,6 +37,9 @@ npm start
 ## How frontend + backend connect
 - Frontend uses `fetch('/api/...')` so when both hosted together the browser calls backend endpoints at `/api`
 - The backend checks `Authorization: Bearer <token>` header (JWT) for protected routes
+
+## ScreenShot
+- ![Project Screenshot](./live.png)
 
 ## Notes
 - This project is intentionally minimal and easy to understand.
