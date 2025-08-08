@@ -1,4 +1,4 @@
-const apiBase = '/api';
+const apiBase = 'http://localhost:5000/api';
 const token = localStorage.getItem('token');
 if (!token) {
   window.location.href = '/';

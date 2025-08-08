@@ -1,4 +1,4 @@
-const apiBase = '/api'; // when backend and frontend deployed together, this works. If backend separate, set full URL like 'https://your-backend.com/api'
+const apiBase = 'http://localhost:5000/api';
 
 document.getElementById('signupForm').addEventListener('submit', async (e) => {
   e.preventDefault();

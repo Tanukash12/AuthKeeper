@@ -1,35 +1,29 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Fullstack Demo - Login / Signup</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AuthKeep</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Fullstack Demo</h1>
-    <div class="auth">
-      <div>
-        <h2>Signup</h2>
-        <form id="signupForm">
-          <input id="su_username" placeholder="Username" required />
-          <input id="su_password" type="password" placeholder="Password" required />
-          <button type="submit">Signup</button>
-        </form>
-      </div>
-      <div>
-        <h2>Login</h2>
-        <form id="loginForm">
-          <input id="li_username" placeholder="Username" required />
-          <input id="li_password" type="password" placeholder="Password" required />
-          <button type="submit">Login</button>
-        </form>
-      </div>
-    </div>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input id="li_username" placeholder="Username" required />
+      <input id="li_password" type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
     <p id="msg"></p>
-    <p>After login, go to <a href="dashboard.html">Dashboard</a></p>
+    <p>Don't have an account? <a href="signup.html">Signup here</a></p>
   </div>
-<script src="js/auth.js"></script>
+
+  <script src="js/auth.js" data-mode="login"></script>
+
+  <footer>
+  <hr />
+  <p>&copy; 2025 Tanushka Kashyap. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
