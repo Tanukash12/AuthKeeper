@@ -5,8 +5,9 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start; /* better for longer pages */
+  min-height: 100vh;
+  padding-top: 40px; /* space from top */
 }
 
 .container {
@@ -14,13 +15,16 @@ body {
   padding: 2rem 3rem;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  width: 320px;
+  width: 360px; /* slightly wider */
   text-align: center;
+  box-sizing: border-box;
+  min-height: 500px;
 }
 
 h2 {
   margin-bottom: 1.5rem;
   color: #333;
+  font-weight: 700;
 }
 
 input {
@@ -30,6 +34,7 @@ input {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 button {
@@ -42,6 +47,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.25s ease;
+  margin-top: 0.5rem;
 }
 
 button:hover {
@@ -52,6 +58,7 @@ p#msg {
   color: red;
   min-height: 1.2rem;
   margin-top: 0.5rem;
+  font-weight: 600;
 }
 
 a {
@@ -61,4 +68,69 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Dashboard list styles */
+#itemsList {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: left;
+}
+
+#itemsList li {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #333;
+}
+
+#itemsList li span {
+  flex-grow: 1;
+  margin-right: 10px;
+  word-break: break-word;
+}
+
+#itemsList button.edit,
+#itemsList button.del {
+  width: auto;
+  padding: 5px 12px;
+  margin: 0 5px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+#itemsList button.edit {
+  background-color: #4caf50;
+  margin-left: 0;
+}
+
+#itemsList button.edit:hover {
+  background-color: #388e3c;
+}
+
+#itemsList button.del {
+  background-color: #e53935;
+}
+
+#itemsList button.del:hover {
+  background-color: #ab000d;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
 }
